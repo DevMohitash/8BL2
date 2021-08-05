@@ -22,7 +22,7 @@ kmsg3 "Extreme Mode Enabled"
 kmsg3 "(with your custom changes if you did any)"
 kmsg3 "----"
 
-$BB mv -rf /data/media/0/YourBLchanges.log /data/data/com.mkadp.blapp/files/YourBLchanges.log
+$BB cp -rf /data/media/0/YourBLchanges.log /data/data/com.mkadp.blapp/files/YourBLchanges.log
 
 $BB rm -rf /cache/*	
 $BB rm -rf /data/dalvik-cache/*
