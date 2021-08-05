@@ -4,7 +4,7 @@
 BB=/data/adb/magisk/busybox
 CLOG=/data/media/0/YourBLchanges.log
 ZLOG=/data/media/0/YourBLchanges.log
-BRANCH="5-Disable-EU-compatible-mode"
+BRANCH="ZZ-Disable-EU-compatible-mode"
 #=======================================#
 #=======================================#
 
@@ -25,7 +25,6 @@ $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/blext1.sh /data/adb/mod
 $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/service1.sh /data/adb/modules/butterlimitsforop7poos11uni/service.sh
 
 $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/bl/module.prop /data/adb/modules/butterlimitsforop7poos11uni
-$BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/bl/system.prop /data/adb/modules/butterlimitsforop7poos11uni
 
 $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/bl/* /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/
 
@@ -35,14 +34,25 @@ kmsg3 "Disabled EU Compatible Mode"
 kmsg3 "ButterLimits Enabled"
 kmsg3 "----"
 
+$BB mv -rf /data/media/0/YourBLchanges.log /data/data/com.mkadp.blapp/files/YourBLchanges.log
+
 $BB rm -rf /cache/*	
 $BB rm -rf /data/dalvik-cache/*
 
 sleep 1
 
-am start -a android.intent.action.MAIN -e toasttext "Disabled EU Compatible Mode. Rebooting device in 5 secs" -n mkadp.toast/.MainActivity
-
-sleep 5
+am start -a android.intent.action.MAIN -e toasttext "EU Mode Disabled. Rebooting device in 5 secs" -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 2
 
 am start -a android.intent.action.MAIN -e toasttext "Rebooting Now..." -n mkadp.toast/.MainActivity
 
