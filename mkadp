@@ -25,7 +25,6 @@ $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/blexteu.sh /data/adb/mo
 $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/serviceeu.sh /data/adb/modules/butterlimitsforop7poos11uni/service.sh
 
 $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/eu/module.prop /data/adb/modules/butterlimitsforop7poos11uni
-$BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/eu/system.prop /data/adb/modules/butterlimitsforop7poos11uni
 
 $BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/eu/* /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/
 
@@ -35,14 +34,25 @@ kmsg3 "EU Compatible Mode On"
 kmsg3 "ButterLimits Enabled"
 kmsg3 "----"
 
+$BB mv -rf /data/media/0/YourBLchanges.log /data/data/com.mkadp.blapp/files/YourBLchanges.log
+
 $BB rm -rf /cache/*	
 $BB rm -rf /data/dalvik-cache/*
 
 sleep 1
 
-am start -a android.intent.action.MAIN -e toasttext "EU Compatible Mode On. Rebooting device in 5 secs" -n mkadp.toast/.MainActivity
-
-sleep 5
+am start -a android.intent.action.MAIN -e toasttext "EU Mode Enabled. Rebooting device in 5 secs" -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 1
+am start -a android.intent.action.MAIN -e toasttext "After Reboot, please wait for atleast 5 minutes before unlocking it." -n mkadp.toast/.MainActivity
+sleep 2
 
 am start -a android.intent.action.MAIN -e toasttext "Rebooting Now..." -n mkadp.toast/.MainActivity
 
