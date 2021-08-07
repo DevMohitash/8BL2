@@ -9,9 +9,9 @@ BRANCH="Extreme-Profile"
 
 sleep 1
 
-$BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/blext.sh /data/adb/modules/butterlimitsforop7poos11uni/service.sh
-$BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/zon.sh /data/adb/modules/butterlimitsforop7poos11uni/post-fs-data.sh
-$BB cp -rf /data/adb/modules/butterlimitsforop7poos11uni/system/etc/mkadp/extreme/module.prop /data/adb/modules/butterlimitsforop7poos11uni
+$BB cp -rf /data/adb/modules/butterlimitsforop8poos11uni/blext.sh /data/adb/modules/butterlimitsforop8poos11uni/service.sh
+$BB cp -rf /data/adb/modules/butterlimitsforop8poos11uni/zon.sh /data/adb/modules/butterlimitsforop8poos11uni/post-fs-data.sh
+$BB cp -rf /data/adb/modules/butterlimitsforop8poos11uni/system/etc/mkadp/extreme/module.prop /data/adb/modules/butterlimitsforop8poos11uni
 
 kmsg3() {
 	echo -e "[*] $@" >> $CLOG
